@@ -72,6 +72,10 @@ public class TresEnRaya {
 		return jugada;
 		
 	}
+	/**
+	 * 
+	 * @return el tablero
+	 */
 	char[][] getTablero(){
         return this.tablero;
     }
@@ -166,12 +170,21 @@ public class TresEnRaya {
 		
 	}
 
-
+/**
+ * 
+ * @param fila fila del tablero que comprueba
+ * @param columna columna del tablero que se comprueba
+ * @return true si la celda está vacía y false si no lo está
+ */
 	boolean posicionLibre(int fila,int columna){
     
     if (tablero[fila][columna]=='-') return true; else return false;
     }
-
+	
+	/**
+	 * Devuelve las posiciones libres de la partida.
+	 * @return numero de huecos
+	 */
 int huecosLibres(){
     int hl=0;    
     for (int i=0; i< tablero.length; i++){
